@@ -1473,18 +1473,6 @@ pubmed = Planetoid(root='data', name='PubMed')
 3. **Visualize Everything**: Use t-SNE and other tools to understand learned representations
 4. **Read Papers**: Start with original GCN paper and recent surveys
 
-#### For Practitioners
-1. **Proper Evaluation**: Always use multiple random seeds and report statistics
-2. **Overfitting Awareness**: Monitor validation performance carefully
-3. **Baseline Comparisons**: Compare against simple baselines (MLP, random)
-4. **Domain Knowledge**: Incorporate graph-specific insights into model design
-
-#### For Researchers
-1. **Theoretical Foundations**: Understand mathematical principles deeply
-2. **Novel Architectures**: Explore new message passing mechanisms
-3. **Scalability Solutions**: Address computational challenges
-4. **Application Focus**: Solve real-world problems with graph data
-
 ---
 
 **Author**: [xiaoze]
