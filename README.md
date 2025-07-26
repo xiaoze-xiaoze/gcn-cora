@@ -114,7 +114,7 @@ For Cora: A[i,j] = 1 if paper i cites paper j
 
 **Node Feature Matrix (X)**:
 ```
-X ∈ R^(N×F) where:
+X ∈ R<sup>(N×F)</sup> where:
 - N = number of nodes (2,708 for Cora)
 - F = feature dimension (1,433 for Cora)
 - X[i,:] = feature vector for node i
@@ -341,15 +341,13 @@ GCN: Designed for graph data
 
 The fundamental GCN operation is defined as:
 
-```
-H^(l+1) = σ(D̃^(-1/2) Ã D̃^(-1/2) H^(l) W^(l))
-```
+$$H^{(l+1)} = \sigma(\tilde{D}^{-1/2} \tilde{A} \tilde{D}^{-1/2} H^{(l)} W^{(l)})$$
 
 Where:
-- **H^(l)**: Node representations at layer l
+- **H<sup>(l)</sup>**: Node representations at layer l
 - **Ã**: Adjacency matrix with self-loops (A + I)
 - **D̃**: Degree matrix of Ã
-- **W^(l)**: Learnable weight matrix at layer l
+- **W<sup>(l)</sup>**: Learnable weight matrix at layer l
 - **σ**: Activation function (ReLU)
 
 ### Breaking Down the Formula
@@ -375,7 +373,7 @@ D̃[i,i] = sum of row i in Ã
 D̃[i,j] = 0 for i ≠ j
 ```
 
-#### 3. **Symmetric Normalization: D̃^(-1/2) Ã D̃^(-1/2)**
+#### 3. **Symmetric Normalization: D̃<sup>-½</sup> Ã D̃<sup>-½</sup>**
 This normalization ensures:
 - **Scale Invariance**: Nodes with different degrees are treated fairly
 - **Numerical Stability**: Prevents exploding/vanishing gradients
